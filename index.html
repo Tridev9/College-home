@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <script src="https://kit.fontawesome.com/c98ed32fca.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <a href=""><img src="pscmrlogo.png" class="logo" /></a>
+      <div class="heading">
+        <h1>POTTI SRIRAMULU CHALAVADI MALLIKARJUNA RAO</h1>
+        <h2>COLLEGE OF ENGINEERING & TECHNOLOGY</h2>
+      </div>
+      <a href=""><img src="nba .png" alt="" /></a>
+      <a href=""><img src="naac.png" alt="" /></a>
+      <a href=""><img src="iso.png" alt="" /></a>
+    </section>
+    <section id="imgs">
+      <div class="subtext">
+        <h3>Trending In College</h3>
+      </div>
+      <div id="drag-container">
+        <div id="spin-container">
+          <img
+            src="https://assets.thehansindia.com/h-upload/2019/12/26/248685-pscmr-college.webp"
+            alt=""
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBucMH3b2SD3u8ZuaptEE1BPFYBq7GdGRExw&usqp=CAU"
+            alt=""
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8sdCTNh-XQ_nQoSPP8sUKLMJL02dVkLWO42ZbLYoYEVsexclw-kIc_nvNuVjgdthSL2c&usqp=CAU"
+            alt=""
+          />
+          <img
+            src="https://www.pscmr.ac.in/images/ec/ece-activities-img-16.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.pscmr.ac.in/images/ece-activities/j7.jpg"
+            alt=""
+          />
+          <img src="https://pscmr.ac.in/sports/6.jpg" alt="" />
+          <img
+            src="https://www.campusoption.com/images/colleges/gallery/21_09_17_061912_Management.jpg"
+            alt=""
+          />
+
+          <!-- Text at center of ground -->
+          <p>Trending In College</p>
+        </div>
+        <div id="ground"></div>
+      </div>
+    </section>
+    <div class="text">
+      <h4></h4>
+    </div>
+    <section id="feature">
+      <div class="fe-box">
+        <img src="student.png" alt="" />
+        <a href=""><h6>R_D_forms</h6></a>
+      </div>
+      <div class="fe-box">
+        <img src="student1.png" alt="" />
+        <a href=""><h6>List of Forms</h6></a>
+      </div>
+      <div class="fe-box">
+        <img src="student2.png" alt="" />
+        <a href=""><h6>Academic Forms</h6></a>
+      </div>
+      <div class="fe-box">
+        <img src="student3.png" alt="" />
+        <a href=""><h6>Departmental_forms</h6></a>
+      </div>
+      <div class="fe-box">
+        <img src="student4.png" alt="" />
+        <a href=""><h6>General Forms(Monthly)</h6></a>
+      </div>
+      <div class="fe-box">
+        <img src="student6.png" alt="" />
+        <a href=""><h6>IQAC Forms</h6></a>
+      </div>
+    </section>
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="pscmrlogo.png" alt="" />
+        <h4>Contact</h4>
+        <p>
+          <strong>Address: </strong> 7-3-6/1, Raghavareddy Street, Kothapeta,
+          Vijayawada-520001 Andhra Pradesh, India
+        </p>
+        <p><strong>Phone:</strong>+91-8885219222</p>
+        <p><strong>Phone:</strong>+91-98482-50750</p>
+        <p><strong>Email:</strong>principal@pscmr.ac.in</p>
+        <div class="follow">
+          <h4>Follow us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About Us</h4>
+        <a href="#"> About PSCMRCET</a>
+        <a href="#">Vision / Mission / Quality Policy/ Core Values</a>
+        <a href="#">SKPVV Hindu High Schools Committee</a>
+        <a href="#">PSCMRCET Committee</a>
+        <a href="#">Principal</a>
+        <a href="#">Organization</a>
+        <a href="#">Awards & Certifications</a>
+        <a href="#">Academic Collaborations</a>
+        <a href="#">MOUs</a>
+      </div>
+      <div class="col">
+        <h4>Infrastructure</h4>
+        <a href="#">About the Campus</a>
+        <a href="#">Sports</a>
+        <a href="#">Library</a>
+        <a href="#">Laboratories</a>
+        <a href="#">Hostels</a>
+        <a href="#">Computing Infrastructure</a>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2019 PSCMRCET Privacy Policy</p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    var radius = 240;
+    var autoRotate = true;
+    var rotateSpeed = -60;
+    var imgWidth = 120;
+    var imgHeight = 170;
+
+    setTimeout(init, 800);
+
+    var odrag = document.getElementById("drag-container");
+    var ospin = document.getElementById("spin-container");
+    var aImg = ospin.getElementsByTagName("img");
+    var aVid = ospin.getElementsByTagName("video");
+    var aEle = [...aImg, ...aVid];
+
+    // Size of images
+    ospin.style.width = imgWidth + "px";
+    ospin.style.height = imgHeight + "px";
+
+    // Size of ground - depend on radius
+    var ground = document.getElementById("ground");
+    ground.style.width = radius * 3 + "px";
+    ground.style.height = radius * 3 + "px";
+
+    function init(delayTime) {
+      for (var i = 0; i < aEle.length; i++) {
+        aEle[i].style.transform =
+          "rotateY(" +
+          i * (360 / aEle.length) +
+          "deg) translateZ(" +
+          radius +
+          "px)";
+        aEle[i].style.transition = "transform 0.5s";
+        aEle[i].style.transitionDelay =
+          delayTime || (aEle.length - i) / 4 + "s";
+      }
+    }
+
+    function applyTranform(obj) {
+      // Constrain the angle of camera (between 0 and 180)
+      if (tY > 180) tY = 180;
+      if (tY < 0) tY = 0;
+
+      // Apply the angle
+      obj.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
+    }
+
+    function playSpin(yes) {
+      ospin.style.animationPlayState = yes ? "running" : "paused";
+    }
+
+    var sX,
+      sY,
+      nX,
+      nY,
+      desX = 0,
+      desY = 0,
+      tX = 0,
+      tY = 10;
+
+    // auto spin
+    if (autoRotate) {
+      var animationName = rotateSpeed > 0 ? "spin" : "spinRevert";
+      ospin.style.animation = `${animationName} ${Math.abs(
+        rotateSpeed
+      )}s infinite linear`;
+    }
+
+    // setup events
+    document.onpointerdown = function (e) {
+      clearInterval(odrag.timer);
+      e = e || window.event;
+      var sX = e.clientX,
+        sY = e.clientY;
+
+      this.onpointermove = function (e) {
+        e = e || window.event;
+        var nX = e.clientX,
+          nY = e.clientY;
+        desX = nX - sX;
+        desY = nY - sY;
+        tX += desX * 0.1;
+        tY += desY * 0.1;
+        applyTranform(odrag);
+        sX = nX;
+        sY = nY;
+      };
+
+      this.onpointerup = function (e) {
+        odrag.timer = setInterval(function () {
+          desX *= 0.95;
+          desY *= 0.95;
+          tX += desX * 0.1;
+          tY += desY * 0.1;
+          applyTranform(odrag);
+          playSpin(false);
+          if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+            clearInterval(odrag.timer);
+            playSpin(true);
+          }
+        }, 17);
+        this.onpointermove = this.onpointerup = null;
+      };
+
+      return false;
+    };
+
+    document.onmousewheel = function (e) {
+      e = e || window.event;
+      var d = e.wheelDelta / 20 || -e.detail;
+      radius += d;
+      init(1);
+    };
+  </script>
+</html>
